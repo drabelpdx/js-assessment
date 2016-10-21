@@ -1,7 +1,7 @@
 exports = typeof window === 'undefined' ? global : window;
 
 exports.stringsAnswers = {
-  reduceString: function(str, amount) {
+  reduceString: (str, amount) => {
     var string = str.split('');
     var item = '';
     var count = 1;
@@ -19,7 +19,7 @@ exports.stringsAnswers = {
     return array;
   },
 
-  wordWrap: function(str, cols) {
+  wordWrap: (str, cols) => {
     var words = str.split(' ');
     var lineLength = 0;
   	var string = words.map((word) => {
@@ -40,7 +40,7 @@ exports.stringsAnswers = {
     return string.join('');
   },
 
-  reverseString: function(str) {
+  reverseString: (str) => {
     var arr = str.split('');
     arr.reverse();
     var newString = arr.join('');
